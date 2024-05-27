@@ -136,15 +136,24 @@ a {
 
 /* Мои стили */
 
-menu {
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
+.header__menu {
     padding: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
     margin: 0 10px;
+}
+
+/* Home Work 2 */
+.header__link {
+    font-family: "Russo One", sans-serif;
+    color: cornflowerblue;
+    font-size: 20px;
+    line-height: 20px;
+    text-shadow:
+        1px 0 1px #000,
+        0 1px 1px #000,
+        -1px 0 1px #000,
+        0 -1px 1px #000;
 }
 
 .conteiner {
@@ -152,54 +161,57 @@ menu {
     margin: 0 auto;
 }
 
-h1 {
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
+/* Home Work 2 */
+.title {
+    color: #222222;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
     text-align: center;
-    padding: 20px;
-    color: chocolate;
+    font-family: "Russo One", sans-serif;
+    margin-top: 20px;
 }
 
 .header {
     background-color: chocolate;
 }
 
-p {
+/* Home Work 2 */
+.text {
     font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
-    line-height: 1.5em;
-    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7d7987;
 }
 
-h2{
+/* Home Work 2 */
+.subtitle {
     font-family: "Russo One", sans-serif;
-    font-weight: 400;
+    color: coral;
     font-style: normal;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 80px;
     text-align: center;
-    padding: 10px 0;
-    color: black;
 }
 
-.table-product{
+.table-product {
     display: flex;
     justify-content: space-between;
 }
 
-.product-cart{
+.product-cart {
     max-width: 200px;
     margin: 10px;
 }
 
-.product-cart__image-img{
+.product-cart__image-img {
     max-width: 200px;
 }
 
-.product-cart__name-text{
+.product-cart__name-text {
     font-family: "Russo One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -209,7 +221,7 @@ h2{
     color: chocolate;
 }
 
-.product-cart__description-text{
+.product-cart__description-text {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
