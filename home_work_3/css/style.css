@@ -100,6 +100,28 @@ body {
     padding-bottom: 97px;
 }
 
+.subtitle {
+    font-weight: 600;
+    font-size: 45px;
+    color: #000;
+}
+
+.infographics__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #666;
+}
+
+.infographics {
+    background: #fafafa;
+}
+
+.infographics_flex {
+    display: flex;
+    align-items: center;
+}
+
 /* Подключение скаченного шрифта */
 
 @font-face {
