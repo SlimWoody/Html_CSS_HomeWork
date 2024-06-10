@@ -82,6 +82,8 @@ li {
 }
 
 .heading {
+    border-left: 12px solid #f16d7f;
+    padding-left: 16px;
     font-weight: 900;
     font-size: 48px;
     color: #222;
