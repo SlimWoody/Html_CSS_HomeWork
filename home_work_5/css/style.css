@@ -191,10 +191,61 @@ li {
     background: #f7e4e2;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
+}
+
+.product-card__image-box:hover .blackout{
+    opacity: 0.86;
+}
+
+.product-card__image-box:hover .product-card__add-to-cart-text{
+    opacity: 1;
+}
+
+.product-card__img {
+    display: block;
+    position: relative;
 }
 
 .image-product {
     display: block;
+}
+
+.blackout {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(58, 56, 56);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
+}
+
+.product-card__add-to-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.product-card__add-to-cart-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    padding: 1em;
+    border: solid 1px #fff;
+    gap:11px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
 }
 
 .product-card__info {
@@ -233,6 +284,189 @@ li {
     font-weight: 400;
     font-size: 16px;
     color: #f26376;
+    transition: all 0.3s;
+}
+
+.fetured-items-block__button-all-product:hover {
+    color: #fff;
+    background: #ff6a6a;
+}
+
+/* Блок footer__info */
+
+.footer__info {
+    display: flex;
+    background: #222224;
+    justify-content: space-between;
+}
+
+.footer__info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 103px 0px 104px 0px;
+    min-width: 360px;
+}
+
+.footer__info-img {
+    height: 40px;
+    margin-bottom: 19px;
+}
+
+.footer__info-title {
+    font-weight: 400;
+    font-size: 19px;
+    color: #fbfbfb;
+    margin-bottom: 16px;
+}
+
+.footer__info-text {
+    font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+    color: #fbfbfb;
+    width: 75%;
+}
+
+/* блок footer__comment-and-subscribe */
+
+.footer__comment-and-subscribe {
+    background-image: url(../img/footer/__comment-and-subscribe/background-comment-and-subscribe.jpg.jpg);
+    background-size: cover;
+}
+
+.flex__comment-and-subcribe {
+    display: flex;
+}
+
+.footer__comment {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.footer__comment-box {
+    max-width: 80%;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-avatar {
+    margin-bottom: 30px;
+    border-radius: 100%;
+}
+
+.avatar {
+    display: block;
+}
+
+.comment-text {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #222224;
+    max-width: 80%;
+}
+
+.comment-text_italic {
+    font-style: italic;
+}
+
+.footer__subscribe {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 150px 100px 156px 100px;
+}
+
+.footer__subscribe-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 167%;
+}
+
+.footer__subscribe-subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.footer__subscribe-conteiner {
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.subscribe-input {
+    font-weight: 400;
+    font-size: 14px;
+    color: #222224;
+    background: #e1e1e1;
+    outline: none;
+    border-radius: 50px 0 0 50px;
+    flex-grow: 1;
+    min-width: 200px;
+    border: none;
+    padding: 15px 20px;
+    font-family: "Lato", sans-serif;
+}
+
+.subscribe-button {
+    background: #f16d7f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.footer__content {
+    background: #222224;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 23px;
+}
+
+.footer__copy {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fbfbfb;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 7.3px;
+}
+
+.footer__social-link {
+    display: flex;
+    width: 31px;
+    height: 32px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.footer__social-link:hover {
+    background: #f16d7f;
+}
+
+.footer__social-link:hover path {
+    fill: #fff;
 }
 
 /* Медиа запросы для планшетной версии */
@@ -259,6 +493,7 @@ li {
 
     .heading {
         font-size: 44px;
+        margin-right: 16p;
     }
 
     .heading__small {
@@ -289,6 +524,56 @@ li {
     .product-cards-block {
         grid-template-columns: repeat(2, auto);
         gap: 16px;
+    }
+
+    .fetured-items-block__button-block {
+        margin-bottom: 64px;
+    }
+
+    .footer__info {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer__info-block {
+        padding: 0;
+        margin-top: 48px;
+    }
+
+    .footer__info-block_tablet-version {
+        margin-bottom: 64px;
+    }
+
+    .footer__info-text {
+        max-width: 54%;
+    }
+
+    .footer__comment {
+        margin-top: 64px;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .flex__comment-and-subcribe {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comment-text {
+        max-width: 60%;
+    }
+
+    .footer__subscribe {
+        padding: 75px 0 140px 0;
+    }
+
+    .footer__copy {
+        margin-left: 16px;
+    }
+
+    .footer__socials {
+        margin-right: 16px;
     }
 }
 
@@ -364,5 +649,55 @@ li {
         justify-content: center;
     }
 
+    .fetured-items-block__button-block {
+        margin-bottom: 96px;
+    }
 
+    .footer__info-block_mobile-version {
+        margin-bottom: 81px;
+    }
+
+    .footer__comment-box {
+        max-width: 100%;
+    }
+
+    .footer__info-text {
+        max-width: 100%;
+    }
+
+    .comment-text {
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .footer__subscribe {
+        max-width: 100%;
+    }
+
+    .footer__subscribe-subtitle {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .footer__subscribe {
+        padding: 59px 0 109px 0;
+    }
+
+    .footer__content {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 43px;
+        padding-bottom: 9px;
+        gap: 40px;
+    }
+
+    .footer__copy {
+        margin-left: 0;
+    }
+
+    .footer__socials {
+        margin-right: 0;
+    }
 }
