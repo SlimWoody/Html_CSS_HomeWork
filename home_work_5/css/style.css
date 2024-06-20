@@ -203,8 +203,13 @@ li {
 }
 
 .product-card__img {
-    display: block;
+    display: flex;
+    height: 100%;
+    /* display: block; */
     position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-product {
