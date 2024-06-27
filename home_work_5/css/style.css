@@ -1,5 +1,9 @@
 /* Подключаем шрифт */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Lato", sans-serif;
 }
@@ -46,8 +50,13 @@ li {
 /* Блок header */
 
 .header {
+    /* position: sticky; */
     background-color: #222;
     padding: 18px 0 19px 0;
+    /* top: 100px;
+    /* left: 0;
+    right: 0; */
+    /* z-index: 1000; */
 }
 
 .header__block-right {
@@ -56,10 +65,78 @@ li {
     gap: 41px;
 }
 
+.search-icon:hover path {
+    fill: #f16d7f;
+}
+
 .menu-block {
+    position: relative;
     display: flex;
     align-items: flex-end;
     gap: 33px;
+}
+
+.menu-link:hover path {
+    fill: #f16d7f;
+}
+
+.burger-menu:hover  .menu-block__nav{
+    visibility: visible;
+}
+
+.menu-block__nav:hover {
+    visibility: visible;
+}
+
+.menu-block__nav {
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    min-width: 232px;
+    background-color: #fff;
+    padding-left: 27px;
+    box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+    z-index: 1000;
+    transition: all .3s;
+    right: 0;
+}
+
+.menu-block__nav-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    padding-top: 27px;
+    margin-bottom: 24px;
+}
+
+.menu-block__nav-link {
+    font-weight: 400;
+    font-size: 14px;
+    color: #f16d7f;
+}
+
+
+
+.menu-block__nav-link-section {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6f6e6e;
+    padding-bottom: 11px;
+    padding-left: 21.5px;
+}
+
+.menu-block__nav-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.menu-block__nav-subtitle {
+    padding-bottom: 12px;
+}
+
+.menu-block__nav-block_end {
+    padding-bottom: 26px;
 }
 
 /* блок main__content */
@@ -194,11 +271,11 @@ li {
     transition: all 0.5s;
 }
 
-.product-card__image-box:hover .blackout{
+.product-card__image-box:hover .blackout {
     opacity: 0.86;
 }
 
-.product-card__image-box:hover .product-card__add-to-cart-text{
+.product-card__image-box:hover .product-card__add-to-cart-text {
     opacity: 1;
 }
 
@@ -226,10 +303,10 @@ li {
     bottom: 0;
     background: rgb(58, 56, 56);
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; 
+    transition: opacity 0.5s ease-in-out;
 }
 
-.product-card__add-to-cart{
+.product-card__add-to-cart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,10 +324,10 @@ li {
     display: flex;
     padding: 1em;
     border: solid 1px #fff;
-    gap:11px;
+    gap: 11px;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; 
+    transition: opacity 0.5s ease-in-out;
 }
 
 .product-card__info {
@@ -594,7 +671,7 @@ li {
         flex-direction: row-reverse;
     }
 
-    .icon-mobile {
+    .menu-link_mobile {
         display: none;
     }
 
